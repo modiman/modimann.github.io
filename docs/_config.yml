@@ -52,3 +52,21 @@ plugins:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+
+collections:
+  plog:
+    output: true
+defaults:
+  - scope:
+      path: "_plog"
+    values:
+      layout: article
+      nav_key: plog
+      sidebar:
+        nav: plog
+      license: true
+      aside:
+        toc: true
+      show_edit_on_github: true
+      show_date: false
