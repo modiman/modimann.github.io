@@ -22,7 +22,7 @@ title: 主页
 email: 2468732199@qq.com
 description: >- # this means to ignore newlines until "baseurl:"
  modige的日记本
-baseurl: "https://github.com/modiman/modiman.github.io/tree/gh-pages/docs/_posts" # the subpath of your site, e.g. /blog
+baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: ~
 github_username:  modiman
