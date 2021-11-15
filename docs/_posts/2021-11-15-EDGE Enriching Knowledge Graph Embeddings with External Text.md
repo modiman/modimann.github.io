@@ -19,7 +19,7 @@
 ​       在扩充知识图aKG的帮助下，我们的目标是丰富知识图的嵌入。然而，不可避免的是，一部分新添加的实体是嘈杂的，甚至可能是错误的。为了缓解这个问题，受到了Hinton等人的启发。
 
 ​         特别地，我们提出利用图自动编码器提取两个知识图的低维节点嵌入
-<img src='.\imgs\image-20211115175943950.png'/>
+<img src='https://github.com/modiman/modiman.github.io/blob/gh-pages/docs/pictures\imgs\image-20211115175943950.png'/>
 
 ## 实验设置
 
