@@ -31,13 +31,11 @@
 * 增强和对齐各自对模型整体性能的影响
 
 ### 任务1 链路预测
-
-![image-20211115180514574](.\imgs\image-20211115180514574.png)
+<img src='.\imgs\image-20211115180514574.png'/>
 
 ### 任务2 节点分类
-
-![image-20211115180642725](E:\gitfile\mypages\modiman.github.io\docs\_posts\imgs\image-20211115180642725.png)
+<img src='.\imgs\image-20211115180642725.png'/>
 
 ### 任务3 嵌入效果
+<img src='.\imgs\image-20211115180757214.png'/>
 
-![image-20211115180757214](.\imgs\image-20211115180757214.png)
