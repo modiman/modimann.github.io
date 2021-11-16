@@ -36,5 +36,5 @@
 <img src='.\imgs\image-20211115180642725.png'/>
 
 ### 任务3 嵌入效果
-<img src='.\imgs\image-20211115180757214.png'/>
+<img src='\image-20211115180757214.png'/>
 
