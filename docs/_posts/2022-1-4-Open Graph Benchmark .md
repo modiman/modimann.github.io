@@ -29,3 +29,35 @@
 
 
 
+# PairRE: Knowledge Graph Embeddings via Paired Relation Vectors
+
+## 摘要
+
+为了处理N-to-1、1-to-N和N-to-N这类复杂关系，提出PairRE模型，这是一个对每个关系表示都有成对向量的模型。PairRE能够编码三种重要的关系模式:对称/反对称、逆和复合。给定关系表示的简单约束，PairRE可以进一步编码子关系。在链路预测基准上的实验验证了PairRE提出的关键功能。此外，我们在具有挑战性的Open  graph Benchmark的两个知识图数据集上建立了新的技术水平。
+
+## 方法
+
+使用向量对[r<sup>H</sup>，r<sup>T</sup>]来表示关系嵌入，
+
+r<sup>H</sup>和r<sup>T</sup>分别把头实体head和尾实体投影到欧几里得向量空间
+
+投影运算是两个向量的Hadamard积
+
+PairRE接着计算两个向量的距离作为三元组的可信度，本文使用使用L1范式计算距离
+
+如果h和t在同一三元组（h,r,t）中,希望                 
+
+​                                                         **h○r<sup>H</sup>≈t○r<sup>T</sup>**
+
+否则希望两者尽可能的远离彼此
+
+为了移除scaling freedoms，增加了TransE中的约束，但约束只加给实体嵌入
+
+希望关系嵌入能够简单但充分地捕获关系向量的语义联系和复杂特性，
+
+打分函数定义为
+
+f(h,t) = -||   **h○r<sup>H</sup>≈t○r<sup>T</sup>**||,   ||H|| = ||T|| = 1
+
+
+
