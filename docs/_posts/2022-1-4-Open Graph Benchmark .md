@@ -1,7 +1,7 @@
 # Open Graph Benchmark
 
 * https://ogb.stanford.edu/
-* <a href=" https://zhuanlan.zhihu.com/p/165996331">论文阅读 | 图学习百万量级基准数据集OGB：Open Graph Benchmark - 何明国的文章 - 知乎</a>
+
 
 **OGB的特点**：
 
