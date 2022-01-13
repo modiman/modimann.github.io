@@ -2,7 +2,7 @@
 
 * https://ogb.stanford.edu/
 
-
+* <a href=" https://zhuanlan.zhihu.com/p/165996331">论文阅读 | 图学习百万量级基准数据集OGB：Open Graph Benchmark - 何明国的文章 - 知乎</a>
 **OGB的特点**：
 
 - 规模大。分为small、medium、large三个规模，具体为small：超过10万个节点和超过100万条边；medium：超过100万个节点或超过1000万条边；large：大约1亿个节点或10亿条边。
