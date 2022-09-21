@@ -70,6 +70,8 @@
 
 <!-- /TOC -->
 
+## 背景知识
+
 ### 什么是springboot ？
 
 用来简化spring应用的初始搭建以及开发过程 使用特定的方式来进行配置（properties或yml文件）
@@ -97,51 +99,13 @@
 - 需要更少的配置 因为没有web.xml文件。只需添加用@ Configuration注释的类，然后添加用@Bean注释的方法，Spring将自动加载对象并像以前一样对其进行管理。您甚至可以将@Autowired添加到bean方法中，以使Spring自动装入需要的依赖关系中。
 - 基于环境的配置 使用这些属性，您可以将您正在使用的环境传递到应用程序：-Dspring.profiles.active = {enviornment}。在加载主应用程序属性文件后，Spring将在（application{environment} .properties）中加载后续的应用程序属性文件。
 
+### 怎么理解 Spring Boot 中 “约定优于配置“
 
-
-### Spring Boot 的目录结构是怎样的？
-
-```java
-
- +- javastack
-     +- MyApplication.java
-     |
-     +- customer
-     |   +- Customer.java
-     |   +- CustomerController.java
-     |   +- CustomerService.java
-     |   +- CustomerRepository.java
-     |
-     +- order
-         +- Order.java
-         +- OrderController.java
-         +- OrderService.java
-         +- OrderRepository.java
-```
-
-这个目录结构是主流及推荐的做法，而在主入口类上加上 `@SpringBootApplication` 注解来开启 Spring Boot 的各项能力，如自动配置、组件扫描等。
-
-```java
-package cn.javastack.MyApplication;
-
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-
-@SpringBootApplication
-public class MyApplication {
-
-    public static void main(String[] args) {
-        SpringApplication.run(MyApplication.class, args);
-    }
-
-}
-```
-
-如果你不想这么做，你也可以充分利用 `@EnableAutoConfiguration` 和`@ComponentScan` 注解自定义你的行为，不过这不是推荐的做法。
+Spring Boot Starter、Spring Boot Jpa 都是“约定优于配置“的一种体现。都是通过“约定优于配置“的设计思路来设计的，Spring Boot Starter 在启动的过程中会根据约定的信息对资源进行初始化；Spring Boot Jpa 通过约定的方式来自动生成 Sql ，避免大量无效代码编写。
 
 
 
-### Spring Boot 的核心注解是哪个？它主要由哪几个注解组成的？
+## 常用注解
 
 启动类上面的注解是@SpringBootApplication，它也是 Spring Boot 的核心注解，主要组合包含了以下 3 个注解：
 
@@ -153,9 +117,9 @@ public class MyApplication {
 
 
 
-### 怎么理解 Spring Boot 中 “约定优于配置“
 
-Spring Boot Starter、Spring Boot Jpa 都是“约定优于配置“的一种体现。都是通过“约定优于配置“的设计思路来设计的，Spring Boot Starter 在启动的过程中会根据约定的信息对资源进行初始化；Spring Boot Jpa 通过约定的方式来自动生成 Sql ，避免大量无效代码编写。
+
+
 
 
 
