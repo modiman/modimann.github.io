@@ -111,11 +111,11 @@ Spring Boot Starter、Spring Boot Jpa 都是“约定优于配置“的一种体
 
 **@SpringBootConfiguration：** 组合了 @Configuration 注解，实现配置文件的功能。
 
-**@EnableAutoConfiguration：** 打开自动配置的功能，也可以关闭某个自动配置的选项，如关闭数据源自动配置功能：@SpringBootApplication(exclude = { DataSourceAutoConfiguration.class })。
+**@EnableAutoConfiguration：** 打开自动配置的功能，也可以关闭某个自动配置的选项，如关闭数据源自动配置功能：**@SpringBootApplication(exclude = { DataSourceAutoConfiguration.class })。**
 
 **@ComponentScan： **Spring组件扫描。
 
-
+### **2.** **Spring Bean相关**
 
 
 
@@ -278,16 +278,6 @@ Java 开发人员面临的一个主要挑战是将文件更改自动部署到服
 
 
 
-### 什么是 JavaConfig？
-
-Spring JavaConfig 是 Spring 社区的产品，它提供了配置 Spring IoC 容器的纯Java 方法。因此它有助于避免使用 XML 配置。使用 JavaConfig 的优点在于：
-
-**（1）面向对象的配置。** 由于配置被定义为 JavaConfig 中的类，因此用户可以充分利用 Java 中的面向对象功能。一个配置类可以继承另一个，重写它的@Bean 方法等。
-
-**（2）减少或消除 XML 配置。** 基于依赖注入原则的外化配置的好处已被证明。但是，许多开发人员不希望在 XML 和 Java 之间来回切换。JavaConfig 为开发人员提供了一种纯 Java 方法来配置与 XML 配置概念相似的 Spring 容器。从技术角度来讲，只使用 JavaConfig 配置类来配置容器是可行的，但实际上很多人认为将JavaConfig 与 XML 混合匹配是理想的。
-
-**（3）类型安全和重构友好。** JavaConfig 提供了一种类型安全的方法来配置 Spring容器。由于 Java 5.0 对泛型的支持，现在可以按类型而不是按名称检索 bean，不需要任何强制转换或基于字符串的查找。
-
 
 
 ### Spring Boot 支持哪些日志框架？推荐和默认的日志框架是哪个
@@ -295,22 +285,6 @@ Spring JavaConfig 是 Spring 社区的产品，它提供了配置 Spring IoC 容
 Spring Boot 支持 Java Util Logging, Log4j2, Lockback 作为日志框架，如果你使用 Starters 启动器，Spring Boot 将使用 Logback 作为默认日志框架
 
 
-
-### 如何重新加载Spring Boot上的更改，而无需重新启动服务器？
-
-这可以使用DEV工具来实现。通过这种依赖关系，您可以节省任何更改，嵌入式tomcat将重新启动。 
-
-Spring Boot有一个开发工具（DevTools）模块，它有助于提高开发人员的生产力。Java开发人员面临的一个主要挑战是将文件更改自动部署到服务器并自动重启服务器。 
-
-开发人员可以重新加载Spring Boot上的更改，而无需重新启动服务器。这将消除每次手动部署更改的需要。Spring Boot在发布它的第一个版本时没有这个功能。 
-
-这是开发人员最需要的功能。DevTools模块完全满足开发人员的需求。该模块将在生产环境中被禁用。它还提供H2数据库控制台以更好地测试应用程序。 
-
-org.springframework.boot 
-
-spring-boot-devtools 
-
-true 
 
 
 
@@ -352,20 +326,6 @@ true
 **5、可以使用XML配置**
 
 1. Spring Boot 推荐使用 Java 配置而非 XML 配置，但是 Spring Boot 中也可以使用 XML 配置，通过 @ImportResource 注解可以引入一个 XML 配置。
-
-
-
-### Spring Boot 自动配置原理是什么？
-
-注解 @EnableAutoConfiguration, @Configuration, @ConditionalOnClass 就是自动配置的核心，
-
-@EnableAutoConfiguration 给容器导入META-INF/spring.factories 里定义的自动配置类。
-
-筛选有效的自动配置类。
-
-每一个自动配置类结合对应的 xxxProperties.java 读取配置文件进行自动配置功能
-
-
 
 
 
