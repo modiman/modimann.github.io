@@ -223,6 +223,8 @@ bootstrap 配置文件有以下几个应用场景。
 
 # 启动
 
+**三个核心注解以及一个run方法**
+
 ## 启动过程分析
 
 常见启动代码
@@ -245,59 +247,15 @@ public class DemoApplication {
 
 ### 注解（@SpringBootApplication）
 
-### 注解定义
 
-* java核心技术第二卷799页
 
-**注解本身不会做任何事情，他需要工具支持才会有用。例如，当测试一个类的时候，Junit测试工具会调用所有标识有@Test的方法**
-
-每个注解都必须通过一个*注解接口*进行定义，例
-
-```java
-public @interface Test{
-    long timeout() default 0L; 
-}
-```
-
-@interface声明创建了一个真正的Java 接口。处理注解的工具将接收那些实现了这个接口的对象。
-
-### @SpringBootApplication源码
-
-```java
-@Target({ElementType.TYPE})
-@Retention(RetentionPolicy.RUNTIME)
-@Documented
-@Inherited
-@SpringBootConfiguration
-@EnableAutoConfiguration
-@ComponentScan(
-    excludeFilters = {@Filter(
-    type = FilterType.CUSTOM,
-    classes = {TypeExcludeFilter.class}
-), @Filter(
-    type = FilterType.CUSTOM,
-    classes = {AutoConfigurationExcludeFilter.class}
-)}
-)
-```
-
-很明显，@SpringBootApplication注解由三个注解组合而成，分别是：
+@SpringBootApplication注解由三个注解组合而成，分别是：
 
 - @ComponentScan
 - @EnableAutoConfiguration
 - @SpringBootConfiguration
 
 #### **@ComponentScan**
-
-```java
-@Retention(RetentionPolicy.RUNTIME)
-@Target(ElementType.TYPE)
-@Documented
-@Repeatable(ComponentScans.class)
-public @interface ComponentScan {
-    
-}
-```
 
 这个注解的作用是**告诉Spring扫描哪个包下面类，加载符合条件的组件**(比如贴有@Component和@Repository等的类)或者bean的定义。
 
@@ -306,18 +264,6 @@ public @interface ComponentScan {
 所以**启动类最好定义在Root package下**，因为一般我们在使用@SpringBootApplication时，都不指定basePackages的。
 
 #### **@EnableAutoConfiguration**
-
-```java
-@Target(ElementType.TYPE)
-@Retention(RetentionPolicy.RUNTIME)
-@Documented
-@Inherited
-@AutoConfigurationPackage
-@Import(AutoConfigurationImportSelector.class)
-public @interface EnableAutoConfiguration {
-    
-}
-```
 
 这是一个复合注解，看起来很多注解，实际上关键在@Import注解，它会加载AutoConfigurationImportSelector类，然后就会触发这个类的selectImports()方法。根据返回的String数组(配置类的Class的名称)加载配置类。
 
@@ -345,7 +291,41 @@ ResourceLoaderAware, BeanFactoryAware, EnvironmentAware, Ordered {
 
 #### **@SpringBootConfiguration**
 
-**@SpringBootConfiguration继承自@Configuration，二者功能也一致**，标注当前类是配置类， 并会将当前类内声明的一个或多个以@Bean注解标记的方法的实例纳入到[spring容器](https://www.zhihu.com/search?q=spring容器&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra={"sourceType"%3A"article"%2C"sourceId"%3A"295451397"})中，并且实例名就是方法名。
+* @SpringBootConfiguration继承自@Configuration，二者功能也一致，
+* 标注当前类是配置类， 
+* 将当前类内声明的一个或多个以@Bean注解标记的方法的实例纳入到[spring容器](https://www.zhihu.com/search?q=spring容器&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra={"sourceType"%3A"article"%2C"sourceId"%3A"295451397"})中，并且实例名就是方法名。
+
+这个注解用来取代`xml`形式的Bean注入
+
+**示例**
+
+```java
+@Configuration
+public class MyConfig {
+
+    @Bean("user")
+    public User getUser(){
+    	System.out.println("User对象进行创建!");
+        return new User("用户", 22, getDog());
+    }
+
+    @Bean("dog")
+    public Dog getDog(){
+    	System.out.println("Dog对象进行创建!");
+        return new Dog("金毛", 3);
+    }
+}
+```
+
+**与之对应的xml**
+
+```xml
+<bean id="金毛" class = "com.XXX.Dog">
+    
+</bean>
+```
+
+
 
 #### **小结**
 
