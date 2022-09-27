@@ -1,75 +1,3 @@
-**所有问题以及答案，我都整理成了高清PDF，并且带目录：[Java面试整理高清PDF下载](https://gitee.com/tiger-a/java-interview/blob/master/interviewDoc/Java/index.md)**
-
-**所有问题以及答案，我都整理成了高清PDF，并且带目录：[Java面试整理高清PDF下载](https://gitee.com/tiger-a/java-interview/blob/master/interviewDoc/Java/index.md)**
-
-**所有问题以及答案，我都整理成了高清PDF，并且带目录：[Java面试整理高清PDF下载](https://gitee.com/tiger-a/java-interview/blob/master/interviewDoc/Java/index.md)**
-
-
-<!-- TOC -->
-
- - [什么是springboot ？](#什么是springboot-)
- - [Springboot 有哪些优点？](#springboot-有哪些优点)
- - [Spring Boot 的目录结构是怎样的？](#spring-boot-的目录结构是怎样的)
- - [Spring Boot 的核心注解是哪个？它主要由哪几个注解组成的？](#spring-boot-的核心注解是哪个它主要由哪几个注解组成的)
- - [怎么理解 Spring Boot 中 “约定优于配置“](#怎么理解-spring-boot-中-约定优于配置)
- - [如何在自定义端口上运行 Spring Boot应用程序?](#如何在自定义端口上运行-spring-boot应用程序)
- - [Spring Boot、Spring MVC 和 Spring 有什么区别？](#spring-bootspring-mvc-和-spring-有什么区别)
- - [Spring Boot初始化环境变量流程?](#spring-boot初始化环境变量流程)
- - [Spring Boot扫描流程?](#spring-boot扫描流程)
- - [Spring Boot 配置加载顺序详解](#spring-boot-配置加载顺序详解)
- - [Spring Boot 如何定义多套不同环境配置？](#spring-boot-如何定义多套不同环境配置)
- - [Spring Boot 有哪几种读取配置的方式？](#spring-boot-有哪几种读取配置的方式)
- - [SpringBoot 实现热部署有哪几种方式？](#springboot-实现热部署有哪几种方式)
- - [什么是 JavaConfig？](#什么是-javaconfig)
- - [Spring Boot 支持哪些日志框架？推荐和默认的日志框架是哪个](#spring-boot-支持哪些日志框架推荐和默认的日志框架是哪个)
- - [如何重新加载Spring Boot上的更改，而无需重新启动服务器？](#如何重新加载spring-boot上的更改而无需重新启动服务器)
- - [SpringBoot的原理](#springboot的原理)
- - [Spring Boot 自动配置原理是什么？](#spring-boot-自动配置原理是什么)
- - [你如何理解 Spring Boot 中的 Starters？](#你如何理解-spring-boot-中的-starters)
- - [spring-boot-starter-parent 有什么用 ?](#spring-boot-starter-parent-有什么用-)
- - [什么是 Spring Boot Stater ？](#什么是-spring-boot-stater-)
- - [SpringBoot常用的starter有哪些?](#springboot常用的starter有哪些)
- - [Spring Boot 的核心配置文件有哪几个？它们的区别是什么？](#spring-boot-的核心配置文件有哪几个它们的区别是什么)
- - [Spring Boot 的核心注解是哪个？它主要由哪几个注解组成的？](#spring-boot-的核心注解是哪个它主要由哪几个注解组成的)
- - [创建一个 Spring Boot Project 的最简单的方法是什么？](#创建一个-spring-boot-project-的最简单的方法是什么)
- - [Spring Initializr 是创建 Spring Boot Projects 的唯一方法吗？](#spring-initializr-是创建-spring-boot-projects-的唯一方法吗)
- - [如何集成 Spring Boot 和 ActiveMQ？](#如何集成-spring-boot-和-activemq)
- - [什么是 Swagger？你用 Spring Boot 实现了它吗？](#什么是-swagger你用-spring-boot-实现了它吗)
- - [运行 Spring Boot 有哪几种方式？](#运行-spring-boot-有哪几种方式)
- - [Spring Boot 打成的 jar 和普通的 jar 有什么区别 ?](#spring-boot-打成的-jar-和普通的-jar-有什么区别-)
- - [如何使用 Spring Boot 实现分页和排序？](#如何使用-spring-boot-实现分页和排序)
- - [Spring Boot 中如何实现定时任务 ?](#spring-boot-中如何实现定时任务-)
- - [Spring Boot 中的 starter 到底是什么](#spring-boot-中的-starter-到底是什么)
- - [spring-boot-starter-parent 有什么用](#spring-boot-starter-parent-有什么用)
- - [Spring Boot 打成的 jar 和普通的 jar 有什么区别](#spring-boot-打成的-jar-和普通的-jar-有什么区别)
- - [Spring Boot 还提供了其它的哪些 Starter Project Options？](#spring-boot-还提供了其它的哪些-starter-project-options)
- - [为什么我们需要 spring-boot-maven-plugin?](#为什么我们需要-spring-boot-maven-plugin)
- - [Springboot集成mybatis的过程](#springboot集成mybatis的过程)
- - [**什么是YAML？**](#什么是yaml)
- - [YAML 配置的优势在哪里 ?](#yaml-配置的优势在哪里-)
- - [Spring Boot 是否可以使用 XML 配置 ?](#spring-boot-是否可以使用-xml-配置-)
- - [spring boot 核心配置文件是什么？bootstrap.properties 和 application.properties 有何区别 ?](#spring-boot-核心配置文件是什么bootstrapproperties-和-applicationproperties-有何区别-)
- - [什么是 Spring Profiles？](#什么是-spring-profiles)
- - [什么是JavaConfig？](#什么是javaconfig)
- - [Spring Boot、Spring MVC 和 Spring 有什么区别？](#spring-bootspring-mvc-和-spring-有什么区别)
- - [springboot自动配置的原理](#springboot自动配置的原理)
- - [如何禁用一个特定自动配置类？](#如何禁用一个特定自动配置类)
- - [Spring Boot中的监视器是什么？](#spring-boot中的监视器是什么)
- - [什么是 Spring Batch?](#什么是-spring-batch)
- - [Spring Boot 中如何解决跨域问题 ?](#spring-boot-中如何解决跨域问题-)
- - [微服务中如何实现 session 共享](#微服务中如何实现-session-共享)
- - [什么是 CSRF 攻击？](#什么是-csrf-攻击)
- - [我们如何监视所有 Spring Boot 微服务？](#我们如何监视所有-spring-boot-微服务)
- - [什么是嵌入式服务器？我们为什么要使用嵌入式服务器呢?](#什么是嵌入式服务器我们为什么要使用嵌入式服务器呢)
- - [当 Spring Boot 应用程序作为 Java 应用程序运行时，后台会发生什么？](#当-spring-boot-应用程序作为-java-应用程序运行时后台会发生什么)
- - [RequestMapping 和 GetMapping 的不同之处在哪里？](#requestmapping-和-getmapping-的不同之处在哪里)
- - [什么是 Spring Data？](#什么是-spring-data)
- - [什么是 Spring Data REST?](#什么是-spring-data-rest)
- - [为什么我们不建议在实际的应用程序中使用 Spring Data Rest?](#为什么我们不建议在实际的应用程序中使用-spring-data-rest)
- - [比较一下 Spring Security 和 Shiro 各自的优缺点 ?](#比较一下-spring-security-和-shiro-各自的优缺点-)
-
-<!-- /TOC -->
-
 # 概述
 
 ## 背景知识
@@ -165,15 +93,8 @@ Spring Boot Starter、Spring Boot Jpa 都是“约定优于配置“的一种体
 @Scope("singleton")
 public Person personSingleton() {
     return new Person();
-}
+} 
 ```
-
-**四种常见的 Spring Bean 的作用域：** 
-
-1. singleton : 唯一 bean 实例，Spring 中的 bean 默认都是单例的。 
-2. prototype : 每次请求都会创建一个新的 bean 实例。
-3. request : 每一次 HTTP 请求都会产生一个新的 bean，该 bean 仅在当前 HTTP request 内有效。 
-4. session : 每一次 HTTP 请求都会产生一个新的 bean，该 bean 仅在当前 HTTP session 内有效。 
 
 ### @Bean 
 
@@ -610,3 +531,178 @@ CSRF 代表跨站请求伪造。这是一种攻击，迫使最终用户在当前
 ### RequestMapping 和 GetMapping 的不同之处在哪里？
 
 RequestMapping 具有类属性的，可以进行 GET,POST,PUT 或者其它的注释中具有的请求方法。GetMapping 是 GET 请求方法中的一个特例。它只是 ResquestMapping 的一个延伸，目的是为了提高清晰度。
+
+# 源码阅读
+
+启动流程
+
+一、SpringBoot启动的时候，会构造一个SpringApplication的实例，构造SpringApplication的时候会进行初始化的工作，初始化的时候会做以下几件事：
+
+1、把参数sources设置到SpringApplication属性中，这个sources可以是任何类型的参数.
+2、判断是否是web程序，并设置到webEnvironment的boolean属性中.
+3、创建并初始化ApplicationInitializer，设置到initializers属性中 。
+4、创建并初始化ApplicationListener，设置到listeners属性中 。
+5、初始化主类mainApplicatioClass。
+
+
+二、SpringApplication构造完成之后调用run方法，启动SpringApplication，run方法执行的时候会做以下几件事：
+
+1、构造一个StopWatch计时器，用来记录SpringBoot的启动时间 。
+2、初始化监听器，获取SpringApplicationRunListeners并启动监听，用于监听run方法的执行。
+3、创建并初始化ApplicationArguments,获取run方法传递的args参数。
+4、创建并初始化ConfigurableEnvironment（环境配置）。封装main方法的参数，初始化参数，写入到 Environment中，发布 ApplicationEnvironmentPreparedEvent（环境事件），做一些绑定后返回Environment。
+5、打印banner和版本。
+6、构造Spring容器(ApplicationContext)上下文。先填充Environment环境和设置的参数，如果application有设置beanNameGenerator（bean）、resourceLoader（加载器）就将其注入到上下文中。调用初始化的切面，发布ApplicationContextInitializedEvent（上下文初始化）事件。
+7、SpringApplicationRunListeners发布finish事件。
+8、StopWatch计时器停止计时，日志打印总共启动的时间。
+9、发布SpringBoot程序已启动事件(started())
+10、调用ApplicationRunner和CommandLineRunner
+11、最后发布就绪事件ApplicationReadyEvent，标志着SpringBoot可以处理就收的请求了(running())
+
+springboot启动类
+
+```java
+@SpringBootApplication
+@MapperScan("com.example.seckilldemo")
+@EnableSwagger2
+public class SeckillDemoApplication {
+
+    public static void main(String[] args) {
+        SpringApplication.run(SeckillDemoApplication.class, args);
+    }
+
+}
+```
+
+**重要概念**：
+
+* @SpringBootApplication注解
+* SpringApplication.run方法
+
+## SpringApplication.run
+
+首先可以看出run是一个SpringApplication类下的一个静态方法
+
+点开SpringApplication，找到run方法
+
+```java
+  public static ConfigurableApplicationContext run(Class<?> primarySource, String... args) {
+        return run(new Class[]{primarySource}, args);
+    }
+```
+
+看到这是一个返回值类型为`ConfigurableApplicationContext`的静态的方法，同时调用了另一个重载方法`run`
+
+继续定位
+
+```java
+public static ConfigurableApplicationContext run(Class<?>[] primarySources, String[] args) {
+        return (new SpringApplication(primarySources)).run(args);
+    }
+```
+
+发现返回值没有变，形参从`Class<?> primarySource`变成了数组`Class<?>[] primarySources`,同时又调用了`run`的第三个重载方法。
+
+
+
+**需要注意的是，这次在返回时new了一个新的SpringApplication对象，然后调用了run方法**
+
+继续往下定位之前，先看一下这一步都干了什么，定位到`SpringApplication`的含参构造方法
+
+**SpringApplication中的成员参数决定了SpringBoot的配置属性，启动使用默认值。想要修改可以在main方法中自己实例化一个SpringApplication对象并通过set方法修改这些成员变量的值**
+
+```java
+public SpringApplication(Class<?>... primarySources) {
+        this((ResourceLoader)null, primarySources);
+    }
+
+    public SpringApplication(ResourceLoader resourceLoader, Class<?>... primarySources) {
+        this.sources = new LinkedHashSet();
+        this.bannerMode = Mode.CONSOLE;
+        this.logStartupInfo = true;
+        this.addCommandLineProperties = true;
+        this.addConversionService = true;
+        this.headless = true;
+        this.registerShutdownHook = true;
+        this.additionalProfiles = Collections.emptySet();
+        this.isCustomEnvironment = false;
+        this.lazyInitialization = false;
+        this.applicationContextFactory = ApplicationContextFactory.DEFAULT;
+        this.applicationStartup = ApplicationStartup.DEFAULT;
+        this.resourceLoader = resourceLoader;
+        Assert.notNull(primarySources, "PrimarySources must not be null");
+        //用一个linkedhashset存放主类的class对象
+        this.primarySources = new LinkedHashSet(Arrays.asList(primarySources));
+        
+        this.webApplicationType = WebApplicationType.deduceFromClasspath();
+        this.bootstrapRegistryInitializers = new ArrayList(this.getSpringFactoriesInstances(BootstrapRegistryInitializer.class));
+        this.setInitializers(this.getSpringFactoriesInstances(ApplicationContextInitializer.class));
+        this.setListeners(this.getSpringFactoriesInstances(ApplicationListener.class));
+        this.mainApplicationClass = this.deduceMainApplicationClass();
+    }
+```
+
+
+
+再次定位，这次找到了业务逻辑所在的`run`方法，逐句分析
+
+```java
+/**
+	 * 运行 Spring 应用
+	 * 创建并刷新一个新的 ApplicationContext
+	 * 参数是来自main方法的args
+	 * 返回一个运行中的 ApplicationContext
+	 */
+
+public ConfigurableApplicationContext run(String... args) {
+        //记录运行开始时间
+    	long startTime = System.nanoTime();
+    	//获取到所有之前的 bootstrapRegistryInitializers 
+        //挨个执行 initialize() 来完成对引导启动器上下文环境设置
+        DefaultBootstrapContext bootstrapContext = this.createBootstrapContext();
+    
+    
+    
+        ConfigurableApplicationContext context = null;//返回值初始化
+    	//设置是否运行于无显示设备、驱动的服务器端环境中
+        this.configureHeadlessProperty();
+    
+        SpringApplicationRunListeners listeners = this.getRunListeners(args);
+        listeners.starting(bootstrapContext, this.mainApplicationClass);
+
+        try {
+            ApplicationArguments applicationArguments = new DefaultApplicationArguments(args);
+            ConfigurableEnvironment environment = this.prepareEnvironment(listeners, bootstrapContext, applicationArguments);
+            this.configureIgnoreBeanInfo(environment);
+            Banner printedBanner = this.printBanner(environment);
+            context = this.createApplicationContext();
+            context.setApplicationStartup(this.applicationStartup);
+            this.prepareContext(bootstrapContext, context, environment, listeners, applicationArguments, printedBanner);
+            this.refreshContext(context);
+            this.afterRefresh(context, applicationArguments);
+            
+            //打印程序启动时间
+            Duration timeTakenToStartup = Duration.ofNanos(System.nanoTime() - startTime);
+            if (this.logStartupInfo) {
+                (new StartupInfoLogger(this.mainApplicationClass)).logStarted(this.getApplicationLog(), timeTakenToStartup);
+            }
+
+            listeners.started(context, timeTakenToStartup);
+            this.callRunners(context, applicationArguments);
+        } catch (Throwable var12) {
+            this.handleRunFailure(context, var12, listeners);
+            throw new IllegalStateException(var12);
+        }
+
+        try {
+            Duration timeTakenToReady = Duration.ofNanos(System.nanoTime() - startTime);
+            listeners.ready(context, timeTakenToReady);
+            return context;
+        } catch (Throwable var11) {
+            this.handleRunFailure(context, var11, (SpringApplicationRunListeners)null);
+            throw new IllegalStateException(var11);
+        }
+    }
+
+```
+
