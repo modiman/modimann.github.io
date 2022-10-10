@@ -337,11 +337,15 @@ public class MyConfig {
 
 ## Starters
 
-Starters可以理解为启动器，它包含了一系列可以集成到应用里面的依赖包，你可以一站式集成 Spring 及其他技术，而不需要到处找示例代码和依赖包。如你想使用 Spring JPA 访问数据库，只要加入 spring-boot-starter-data-jpa 启动器依赖就能使用了。
+starter是springboot自动配置的重要基础
 
-Starters包含了许多项目中需要用到的依赖，它们能快速持续的运行，都是一系列得到支持的管理传递性依赖。
+starter出现之前，Spring想要引入一个模块需要
 
+1. 到maven仓库去找需要引入的mybatis jar包，选取合适的版本。
+2. 到maven仓库去找mybatis-spring整合的jar包，选取合适的版本。
+3. 在spring的applicationContext.xml文件中配置dataSource和mybatis相关信息。
 
+有了starter就只需要在pom文件中添加对应的依赖就可以完成项目的引入
 
 ### spring-boot-starter-parent 有什么用 ?
 
