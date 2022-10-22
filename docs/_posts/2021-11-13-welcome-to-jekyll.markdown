@@ -1,30 +1,23 @@
----
-layout: post
-title:  "Welcome to Jekyll!"
-date:   2021-11-13 16:36:42 +0800
-categories: jekyll update
----
-You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
+# jekyll发布文章不显示
 
-Jekyll requires blog post files to be named according to the following format:
+昨天尝试更改博客布局，修改顶部栏目，添加文件后发现没有效果
 
-`YEAR-MONTH-DAY-title.MARKUP`
+今天发现新增博客也没有刷新
 
-Where `YEAR` is a four-digit number, `MONTH` and `DAY` are both two-digit numbers, and `MARKUP` is the file extension representing the format used in the file. After that, include the necessary front matter. Take a look at the source for this post to get an idea about how it works.
+## 原因
 
-Jekyll also offers powerful support for code snippets:
+jekyll编译错误
 
-{% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
-{% endhighlight %}
+到博客绑定的邮箱查看报错日志
 
-Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
 
-[jekyll-docs]: https://jekyllrb.com/docs/home
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-talk]: https://talk.jekyllrb.com/
 
+![image-20211223170603288](https://github.com/modiman/modiman.github.io/blob/gh-pages/docs/_posts/imgs/image-20211115125643082.png?raw=true)
+
+
+
+![image-20211223170603288](https://github.com/modiman/modiman.github.io/blob/gh-pages/docs/_posts/imgs/image-20211115125724429.png?raw=true)
+
+发现是这个yml文件格式有错误，这是昨天为了新增栏目添加的文件。俺也不知道怎么改，一想留着也没用，最近也没精力修改博客主题，干脆删了。
+
+以后有时间再重新自定义主题，现在只使用基本功能。
